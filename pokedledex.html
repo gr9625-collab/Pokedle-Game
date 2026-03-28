@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedledex</title>
+    <style>
+        /* Reset defaults */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2em;
+        }
+
+        .pokedex-container {
+            max-width: 800px;
+            margin: 0 auto 50px auto; /* Top 0 so content starts at top */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Space between entries */
+            padding: 10px;
+        }
+
+        .pokemon-entry {
+            width: 150px;
+            height: 200px;
+            padding: 10px;
+            background-color: #222;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: white;
+        }
+
+        .pokemon-entry img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .pokemon-entry p {
+            margin: 10px 0 0 0;
+            text-align: center;
+        }
+
+        /* Optional: hover effect */
+        .pokemon-entry:hover {
+            background-color: #333;
+            transform: scale(1.05);
+            transition: 0.2s;
+        }
+        /* Back button styling */
+        .back-button {
+            position: fixed; /* stays at top left even when scrolling */
+            top: 20px;
+            left: 20px;
+            background-color: yellow;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none; /* removes underline if using <a> */
+        }
+
+        .back-button:hover {
+            background-color: #ffd700; /* darker yellow on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back button -->
+    <a href="index.html" class="back-button">Back</a>
+
+    <h1>Pokedledex</h1>
+
+    <div class="pokedex-container" id="pokedex">
+        <!-- Pokémon entries will go here -->
+    </div>
+
+    <script>
+const pokedexDiv = document.getElementById("pokedex");
+
+// Load your JSON file
+fetch("pokedle_dex.json")
+    .then(response => response.json())
+    .then(data => {
+
+        data.forEach((pkmn, index) => {
+            const id = index + 1;
+
+            // Capitalize the first letter of the Pokémon name
+            const displayName = pkmn.name.charAt(0).toUpperCase() + pkmn.name.slice(1);
+
+            const entry = document.createElement("div");
+            entry.className = "pokemon-entry";
+
+            entry.innerHTML = `
+                <a href="pokemon.html?id=${id}" style="text-decoration: none; color: inherit;">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png">
+                    <p>${id}. ${displayName}</p>
+                </a>
+            `;
+
+            pokedexDiv.appendChild(entry);
+        });
+
+    });
+</script>
+</body>
+</html>

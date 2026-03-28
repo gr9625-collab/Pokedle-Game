@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pokedle</title>
+<style>
+    body {
+        background-color: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    #guessInput {
+        padding: 10px;
+        font-size: 16px;
+        width: 200px;
+        margin-right: 10px;
+        position: relative;
+    }
+
+    #guessButton {
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: yellow;
+        color: black;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #guessButton:hover {
+        background-color: #ffd700;
+    }
+
+    #grid {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 10px;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .guess-row {
+        display: flex; 
+        gap: 5px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .guess-box {
+        padding: 15px;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: capitalize;
+        min-width: 80px;
+    }
+
+    .correct { background-color: green; }
+    .partial { background-color: orange; }
+    .incorrect { background-color: #555; }
+
+    #winMessage {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: yellow;
+    }
+
+    .header-row {
+        display: flex;
+        gap: 5px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5px;
+        flex-wrap: wrap;
+    }
+
+    .header-box {
+        padding: 10px;
+        min-width: 80px;
+    }
+
+    .guess-label {
+        min-width: 150px;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: yellow;
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .back-button:hover {
+        background-color: #ffd700;
+    }
+
+    .autocomplete-dropdown {
+        position: absolute;
+        background-color: #222;
+        border: 1px solid #555;
+        width: 200px;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 1000;
+        display: none;
+    }
+    .autocomplete-item {
+        padding: 5px;
+        cursor: pointer;
+    }
+    .autocomplete-item:hover {
+        background-color: #444;
+    }
+
+    #aiGrid .guess-row {
+        margin-bottom: 10px;
+    }
+    #aiGrid .guess-box {
+        padding: 15px 10px;
+    }
+</style>
+</head>
+<body>
+<a href="index.html" class="back-button">Back</a>
+
+<h1>Pokedle</h1>
+
+<div style="position: relative;">
+    <input type="text" id="guessInput" placeholder="Enter Pokémon name" autocomplete="off">
+    <button id="guessButton">Guess</button>
+    <div id="autocomplete" class="autocomplete-dropdown"></div>
+</div>
+
+<div id="grid">
+    <div class="header-row">
+        <div class="header-box guess-label"></div>
+        <div class="header-box">Type 1</div>
+        <div class="header-box">Type 2</div>
+        <div class="header-box">Evo Stage</div>
+        <div class="header-box">Fully Evolved</div>
+        <div class="header-box">Color</div>
+        <div class="header-box">Habitat</div>
+        <div class="header-box">Gen</div>
+    </div>
+</div>
+<div id="winMessage"></div>
+
+<script>
+let pokedleDex = [];
+let answer;
+let guessCount = 0;
+let dailyMode = false;
+
+// detect mode from URL
+if (window.location.search.includes("mode=daily")) dailyMode = true;
+
+// Elements
+const input = document.getElementById("guessInput");
+const dropdown = document.getElementById("autocomplete");
+const grid = document.getElementById("grid");
+const winMessage = document.getElementById("winMessage");
+
+// Load Pokémon data
+fetch("pokedle_dex.json")
+.then(res => res.json())
+.then(data => {
+    pokedleDex = data;
+    // Determine answer for daily or practice
+    if (dailyMode) {
+        const today = new Date().toISOString().slice(0,10);
+        const stored = localStorage.getItem("dailyAnswer");
+        if (stored && localStorage.getItem("dailyDate") === today) {
+            answer = JSON.parse(stored);
+            const storedGuesses = JSON.parse(localStorage.getItem("dailyGuesses") || "[]");
+            storedGuesses.forEach((g, i) => addGuessRow(g.guess, g.feedback, i, grid));
+            guessCount = storedGuesses.length;
+            if (storedGuesses.some(g => g.win)) {
+                showWinMessage();
+            }
+        } else {
+            answer = pokedleDex[Math.floor(Math.random()*pokedleDex.length)];
+            localStorage.setItem("dailyAnswer", JSON.stringify(answer));
+            localStorage.setItem("dailyDate", today);
+            localStorage.setItem("dailyGuesses", "[]");
+        }
+    } else {
+        answer = pokedleDex[Math.floor(Math.random()*pokedleDex.length)];
+    }
+});
+
+// Autocomplete
+input.addEventListener("input", () => {
+    const value = input.value.toLowerCase().trim();
+    dropdown.innerHTML = "";
+    if (!value) {
+        dropdown.style.display = "none";
+        return;
+    }
+
+    const matches = pokedleDex
+        .filter(p => p.name.toLowerCase().startsWith(value))
+        .slice(0, 10);
+
+    if (matches.length === 0) {
+        dropdown.style.display = "none";
+        return;
+    }
+
+    matches.forEach(p => {
+        const item = document.createElement("div");
+        item.className = "autocomplete-item";
+        item.textContent = p.name.charAt(0).toUpperCase() + p.name.slice(1);
+        item.addEventListener("mousedown", () => {
+            input.value = p.name;
+            dropdown.style.display = "none";
+        });
+        dropdown.appendChild(item);
+    });
+
+    dropdown.style.display = "block";
+});
+
+document.addEventListener("click", (e) => {
+    if (e.target !== input) dropdown.style.display = "none";
+});
+
+// Utilities
+function genToInt(gen) {
+    const genMap = {
+        "generation-i":1,"generation-ii":2,"generation-iii":3,"generation-iv":4,
+        "generation-v":5,"generation-vi":6,"generation-vii":7,"generation-viii":8,"generation-ix":9
+    };
+    return genMap[gen]||0;
+}
+
+// Feedback logic
+function makeGuess(p) {
+    const guess = typeof p==="string" ? pokedleDex.find(x=>x.name.toLowerCase()===p.toLowerCase()) : p;
+    if (!guess) return null;
+
+    const typeFeedback = guess.types.map(t=> answer.types.includes(t) ? "correct":"incorrect");
+    const evoStageFeedback = guess.evo_stage===answer.evo_stage?"correct":"incorrect";
+    const guessFE = String(guess.fully_evolved).toLowerCase()==="yes";
+    const answerFE = String(answer.fully_evolved).toLowerCase()==="yes";
+    const fullyEvolvedFeedback = guessFE===answerFE?"correct":"incorrect";
+    const colorFeedback = guess.color===answer.color?"correct":"incorrect";
+    const habitatFeedback = guess.habitat===answer.habitat?"correct":"incorrect";
+
+    let genFeedback;
+    const guessGen = genToInt(guess.gen);
+    const answerGen = genToInt(answer.gen);
+    if (guessGen===answerGen) genFeedback="correct";
+    else genFeedback = guessGen<answerGen?"partial":"incorrect";
+
+    return {type:typeFeedback,evo_stage:evoStageFeedback,fully_evolved:fullyEvolvedFeedback,
+        color:colorFeedback,habitat:habitatFeedback,gen:genFeedback,guessFE};
+}
+
+// Add row
+function addGuessRow(guess, feedback, count, grid) {
+    const row = document.createElement("div");
+    row.className="guess-row";
+
+    const labelBox = document.createElement("div");
+    labelBox.className="guess-label";
+    labelBox.textContent = `${count+1}. ${guess.name.charAt(0).toUpperCase()+guess.name.slice(1)}`;
+    row.appendChild(labelBox);
+
+    feedback.type.forEach((f,i)=>{
+        const box = document.createElement("div");
+        box.className=`guess-box ${f}`;
+        box.textContent=guess.types[i];
+        row.appendChild(box);
+    });
+
+    const evoBox=document.createElement("div");
+    evoBox.className=`guess-box ${feedback.evo_stage}`;
+    evoBox.textContent=guess.evo_stage;
+    row.appendChild(evoBox);
+
+    const feBox=document.createElement("div");
+    feBox.className=`guess-box ${feedback.fully_evolved}`;
+    feBox.textContent=feedback.guessFE?"Yes":"No";
+    row.appendChild(feBox);
+
+    const colorBox=document.createElement("div");
+    colorBox.className=`guess-box ${feedback.color}`;
+    colorBox.textContent=guess.color;
+    row.appendChild(colorBox);
+
+    const habitatBox=document.createElement("div");
+    habitatBox.className=`guess-box ${feedback.habitat}`;
+    habitatBox.textContent=guess.habitat;
+    row.appendChild(habitatBox);
+
+    const genBox=document.createElement("div");
+    genBox.className=`guess-box ${feedback.gen}`;
+    genBox.textContent=guess.gen;
+    row.appendChild(genBox);
+
+    grid.appendChild(row);
+}
+
+// Show win + AI
+function showWinMessage() {
+    winMessage.textContent=`You guessed it in ${guessCount} ${guessCount===1?"guess":"guesses"}! The Pokémon is ${answer.name}`;
+    if (!document.getElementById("aiGrid")) {
+        const aiBtn=document.createElement("button");
+        aiBtn.textContent="See AI Path";
+        aiBtn.style.marginTop="10px";
+        winMessage.appendChild(document.createElement("br"));
+        winMessage.appendChild(aiBtn);
+
+        aiBtn.addEventListener("click",()=>runAI(aiBtn));
+        aiBtn.click(); // auto-run AI if returning to completed game
+    }
+}
+
+// AI Logic (original)
+function runAI(aiBtn) {
+    const aiGrid=document.createElement("div");
+    aiGrid.id="aiGrid";
+    aiGrid.style.marginTop="20px";
+    aiGrid.innerHTML="<h3>AI Playthrough</h3>";
+
+    let possibleAnswers=pokedleDex.slice();
+    const aiGuesses=[];
+
+    while(possibleAnswers.length>0){
+        const aiGuess=possibleAnswers[Math.floor(Math.random()*possibleAnswers.length)];
+        aiGuesses.push(aiGuess);
+
+        const fb=makeGuess(aiGuess);
+        addGuessRow(aiGuess,fb,aiGuesses.length-1,aiGrid);
+
+        possibleAnswers=possibleAnswers.filter(p=>{
+            if(p.name===aiGuess.name) return false;
+            for(let i=0;i<aiGuess.types.length;i++){
+                if(fb.type[i]==="correct" && !p.types.includes(aiGuess.types[i])) return false;
+            }
+            if(fb.evo_stage==="correct" && p.evo_stage!==aiGuess.evo_stage) return false;
+            const aiFE=String(aiGuess.fully_evolved).toLowerCase()==="yes";
+            const pFE=String(p.fully_evolved).toLowerCase()==="yes";
+            if(fb.fully_evolved==="correct" && aiFE!==pFE) return false;
+            if(fb.color==="correct" && p.color!==aiGuess.color) return false;
+            if(fb.habitat==="correct" && p.habitat!==aiGuess.habitat) return false;
+            if(fb.gen==="correct" && p.gen!==aiGuess.gen) return false;
+            return true;
+        });
+
+        if(fb.type.every(f=>f==="correct") && fb.evo_stage==="correct" &&
+           fb.fully_evolved==="correct" && fb.color==="correct" &&
+           fb.habitat==="correct" && fb.gen==="correct" &&
+           aiGuess.name.toLowerCase()===answer.name.toLowerCase()) break;
+    }
+
+    document.body.appendChild(aiGrid);
+    aiBtn.disabled=true;
+}
+
+// Handle guesses
+document.getElementById("guessButton").addEventListener("click",()=>{
+    const name=input.value.trim();
+    if(!name) return;
+
+    const guess=pokedleDex.find(p=>p.name.toLowerCase()===name.toLowerCase());
+    if(!guess){alert("Pokémon not found!");return;}
+
+    guessCount++;
+    const feedback=makeGuess(name);
+    addGuessRow(guess,feedback,guessCount-1,grid);
+
+    if(dailyMode){
+        const today=new Date().toISOString().slice(0,10);
+        const stored=JSON.parse(localStorage.getItem("dailyGuesses")||"[]");
+        const win=feedback.type.every(f=>f==="correct") && feedback.evo_stage==="correct" &&
+                  feedback.fully_evolved==="correct" && feedback.color==="correct" &&
+                  feedback.habitat==="correct" && feedback.gen==="correct" &&
+                  guess.name.toLowerCase()===answer.name.toLowerCase();
+        stored.push({guess,feedback,win});
+        localStorage.setItem("dailyGuesses",JSON.stringify(stored));
+        if(win) showWinMessage();
+    } else {
+        const win=feedback.type.every(f=>f==="correct") && feedback.evo_stage==="correct" &&
+                  feedback.fully_evolved==="correct" && feedback.color==="correct" &&
+                  feedback.habitat==="correct" && feedback.gen==="correct" &&
+                  guess.name.toLowerCase()===answer.name.toLowerCase();
+        if(win) showWinMessage();
+    }
+
+    input.value="";
+    dropdown.style.display="none";
+});
+</script>
+</body>
+</html>

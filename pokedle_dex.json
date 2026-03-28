@@ -1,0 +1,1814 @@
+[
+  {
+    "name": "bulbasaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "green",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "ivysaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "green",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "venusaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "green",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "charmander",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "red",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "charmeleon",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "red",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "red",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "squirtle",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "wartortle",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "blastoise",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "caterpie",
+    "types": [
+      "bug",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "green",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "metapod",
+    "types": [
+      "bug",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "green",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "butterfree",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "white",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "weedle",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "kakuna",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "yellow",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "beedrill",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "pidgey",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "pidgeotto",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "pidgeot",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "rattata",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "raticate",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "spearow",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "rough-terrain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "fearow",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "rough-terrain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "ekans",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "arbok",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "pikachu",
+    "types": [
+      "electric",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "yellow",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "raichu",
+    "types": [
+      "electric",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "sandshrew",
+    "types": [
+      "ground",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "yellow",
+    "habitat": "rough-terrain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "sandslash",
+    "types": [
+      "ground",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "rough-terrain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "nidoran-f",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "nidorina",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "nidoqueen",
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "nidoran-m",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "nidorino",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "nidoking",
+    "types": [
+      "poison",
+      "ground"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "clefairy",
+    "types": [
+      "fairy",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "pink",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "clefable",
+    "types": [
+      "fairy",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "pink",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "vulpix",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "ninetales",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "jigglypuff",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "pink",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "wigglytuff",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "pink",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "zubat",
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "cave",
+    "gen": "generation-i"
+  },
+  {
+    "name": "golbat",
+    "types": [
+      "poison",
+      "flying"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "cave",
+    "gen": "generation-i"
+  },
+  {
+    "name": "oddish",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "gloom",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "vileplume",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "red",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "paras",
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "red",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "parasect",
+    "types": [
+      "bug",
+      "grass"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "red",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "venonat",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "venomoth",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "diglett",
+    "types": [
+      "ground",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "cave",
+    "gen": "generation-i"
+  },
+  {
+    "name": "dugtrio",
+    "types": [
+      "ground",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "cave",
+    "gen": "generation-i"
+  },
+  {
+    "name": "meowth",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "yellow",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "persian",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "psyduck",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "yellow",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "golduck",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "mankey",
+    "types": [
+      "fighting",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "primeape",
+    "types": [
+      "fighting",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "growlithe",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "arcanine",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "poliwag",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "poliwhirl",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "poliwrath",
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "abra",
+    "types": [
+      "psychic",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "kadabra",
+    "types": [
+      "psychic",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "alakazam",
+    "types": [
+      "psychic",
+      "none"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "machop",
+    "types": [
+      "fighting",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "gray",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "machoke",
+    "types": [
+      "fighting",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "gray",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "machamp",
+    "types": [
+      "fighting",
+      "none"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "gray",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "bellsprout",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "green",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "weepinbell",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "green",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "victreebel",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "green",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "tentacool",
+    "types": [
+      "water",
+      "poison"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "tentacruel",
+    "types": [
+      "water",
+      "poison"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "geodude",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "graveler",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "golem",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "ponyta",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "yellow",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "rapidash",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "slowpoke",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "pink",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "slowbro",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "pink",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "magnemite",
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "gray",
+    "habitat": "rough-terrain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "magneton",
+    "types": [
+      "electric",
+      "steel"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "gray",
+    "habitat": "rough-terrain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "farfetchd",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "doduo",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "dodrio",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "seel",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "white",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "dewgong",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "white",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "grimer",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "muk",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "shellder",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "cloyster",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "gastly",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "cave",
+    "gen": "generation-i"
+  },
+  {
+    "name": "haunter",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "cave",
+    "gen": "generation-i"
+  },
+  {
+    "name": "gengar",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "cave",
+    "gen": "generation-i"
+  },
+  {
+    "name": "onix",
+    "types": [
+      "rock",
+      "ground"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "gray",
+    "habitat": "cave",
+    "gen": "generation-i"
+  },
+  {
+    "name": "drowzee",
+    "types": [
+      "psychic",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "yellow",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "hypno",
+    "types": [
+      "psychic",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "krabby",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "red",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "kingler",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "red",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "voltorb",
+    "types": [
+      "electric",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "red",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "electrode",
+    "types": [
+      "electric",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "red",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "exeggcute",
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "pink",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "exeggutor",
+    "types": [
+      "grass",
+      "psychic"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "cubone",
+    "types": [
+      "ground",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "marowak",
+    "types": [
+      "ground",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "hitmonlee",
+    "types": [
+      "fighting",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "hitmonchan",
+    "types": [
+      "fighting",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "lickitung",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "pink",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "koffing",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "purple",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "weezing",
+    "types": [
+      "poison",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "rhyhorn",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "gray",
+    "habitat": "rough-terrain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "rhydon",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "gray",
+    "habitat": "rough-terrain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "chansey",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "pink",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "tangela",
+    "types": [
+      "grass",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "kangaskhan",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "horsea",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "seadra",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "goldeen",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "red",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "seaking",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "red",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "staryu",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "starmie",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "mr-mime",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "pink",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "scyther",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "green",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "jynx",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "red",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "electabuzz",
+    "types": [
+      "electric",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "magmar",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "red",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "pinsir",
+    "types": [
+      "bug",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "forest",
+    "gen": "generation-i"
+  },
+  {
+    "name": "tauros",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "grassland",
+    "gen": "generation-i"
+  },
+  {
+    "name": "magikarp",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "red",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "gyarados",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "lapras",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "ditto",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "eevee",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "vaporeon",
+    "types": [
+      "water",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "jolteon",
+    "types": [
+      "electric",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "flareon",
+    "types": [
+      "fire",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "red",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "porygon",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "pink",
+    "habitat": "urban",
+    "gen": "generation-i"
+  },
+  {
+    "name": "omanyte",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "omastar",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "kabuto",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "brown",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "kabutops",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "sea",
+    "gen": "generation-i"
+  },
+  {
+    "name": "aerodactyl",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "snorlax",
+    "types": [
+      "normal",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "black",
+    "habitat": "mountain",
+    "gen": "generation-i"
+  },
+  {
+    "name": "articuno",
+    "types": [
+      "ice",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "blue",
+    "habitat": "rare",
+    "gen": "generation-i"
+  },
+  {
+    "name": "zapdos",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "rare",
+    "gen": "generation-i"
+  },
+  {
+    "name": "moltres",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "yellow",
+    "habitat": "rare",
+    "gen": "generation-i"
+  },
+  {
+    "name": "dratini",
+    "types": [
+      "dragon",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "dragonair",
+    "types": [
+      "dragon",
+      "none"
+    ],
+    "evo_stage": 2,
+    "fully_evolved": "No",
+    "color": "blue",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "dragonite",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "evo_stage": 3,
+    "fully_evolved": "Yes",
+    "color": "brown",
+    "habitat": "waters-edge",
+    "gen": "generation-i"
+  },
+  {
+    "name": "mewtwo",
+    "types": [
+      "psychic",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "purple",
+    "habitat": "rare",
+    "gen": "generation-i"
+  },
+  {
+    "name": "mew",
+    "types": [
+      "psychic",
+      "none"
+    ],
+    "evo_stage": 1,
+    "fully_evolved": "Yes",
+    "color": "pink",
+    "habitat": "rare",
+    "gen": "generation-i"
+  }
+]

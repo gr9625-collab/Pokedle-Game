@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        img {
+            width: 150px;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: yellow;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+
+<a href="pokedledex.html" class="back-button">Back</a>
+
+<div class="container" id="pokemon-data"></div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+
+    const container = document.getElementById("pokemon-data");
+
+    fetch("pokedle_dex.json")
+        .then(response => response.json())
+        .then(data => {
+            const pkmn = data[id - 1];
+
+            container.innerHTML = `
+                <h1>${pkmn.name.charAt(0).toUpperCase() + pkmn.name.slice(1)}</h1>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png">
+
+                <p><strong>Types:</strong> ${pkmn.types.join(", ")}</p>
+                <p><strong>Evolution Stage:</strong> ${pkmn.evo_stage}</p>
+                <p><strong>Fully Evolved:</strong> ${pkmn.fully_evolved}</p>
+                <p><strong>Color:</strong> ${pkmn.color}</p>
+                <p><strong>Habitat:</strong> ${pkmn.habitat}</p>
+                <p><strong>Generation:</strong> ${pkmn.gen}</p>
+            `;
+        });
+</script>
+
+</body>
+</html>
